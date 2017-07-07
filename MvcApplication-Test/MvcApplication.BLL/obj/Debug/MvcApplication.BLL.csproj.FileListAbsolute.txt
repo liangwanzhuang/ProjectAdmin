@@ -3,3 +3,7 @@ C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplica
 C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.csprojResolveAssemblyReference.cache
 C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.dll
 C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.pdb
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplication.BLL.dll
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplication.BLL.pdb
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.dll
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.pdb

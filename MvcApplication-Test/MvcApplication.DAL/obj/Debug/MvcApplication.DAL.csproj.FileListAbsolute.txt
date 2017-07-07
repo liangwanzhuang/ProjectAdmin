@@ -9,3 +9,14 @@ C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\bin\zh-Hans\En
 C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.csprojResolveAssemblyReference.cache
 C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.dll
 C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.pdb
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\MvcApplication.DAL.dll
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\MvcApplication.DAL.pdb
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.dll
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.SqlServer.dll
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.xml
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.SqlServer.xml
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\zh-Hans\EntityFramework.resources.dll
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.csprojResolveAssemblyReference.cache
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.dll
+D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.pdb
