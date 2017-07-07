@@ -1,0 +1,11 @@
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\bin\MvcApplication.DAL.dll
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\bin\MvcApplication.DAL.pdb
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.dll
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.SqlServer.dll
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.xml
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.SqlServer.xml
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.csprojResolveAssemblyReference.cache
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.dll
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.pdb

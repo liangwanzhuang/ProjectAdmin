@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestTryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TestTryModelStoreContainer">
+    <EntitySet Name="Class" EntityType="TestTryModel.Store.Class" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="machineinfo" EntityType="TestTryModel.Store.machineinfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProjectInfo" EntityType="TestTryModel.Store.ProjectInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="TestTryModel.Store.User" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClassName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="machineinfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="machineName" Type="nchar" MaxLength="50" />
+    <Property Name="machineNum" Type="int" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="other" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProjectInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="pname" Type="nchar" MaxLength="50" />
+    <Property Name="pjCity" Type="nchar" MaxLength="10" />
+    <Property Name="machineNum" Type="nchar" MaxLength="50" />
+    <Property Name="isNow" Type="int" />
+    <Property Name="pjXSName" Type="nchar" MaxLength="50" />
+    <Property Name="isDealer" Type="int" />
+    <Property Name="phone" Type="nchar" MaxLength="50" />
+    <Property Name="other" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

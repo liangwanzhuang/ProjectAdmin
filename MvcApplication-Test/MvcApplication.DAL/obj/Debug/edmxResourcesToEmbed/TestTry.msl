@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TestTryModelStoreContainer" CdmEntityContainer="TestTryEntities">
+    <EntitySetMapping Name="Class">
+      <EntityTypeMapping TypeName="TestTryModel.Class">
+        <MappingFragment StoreEntitySet="Class">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="machineinfo">
+      <EntityTypeMapping TypeName="TestTryModel.machineinfo">
+        <MappingFragment StoreEntitySet="machineinfo">
+          <ScalarProperty Name="other" ColumnName="other" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="machineNum" ColumnName="machineNum" />
+          <ScalarProperty Name="machineName" ColumnName="machineName" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectInfo">
+      <EntityTypeMapping TypeName="TestTryModel.ProjectInfo">
+        <MappingFragment StoreEntitySet="ProjectInfo">
+          <ScalarProperty Name="other" ColumnName="other" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="isDealer" ColumnName="isDealer" />
+          <ScalarProperty Name="pjXSName" ColumnName="pjXSName" />
+          <ScalarProperty Name="isNow" ColumnName="isNow" />
+          <ScalarProperty Name="machineNum" ColumnName="machineNum" />
+          <ScalarProperty Name="pjCity" ColumnName="pjCity" />
+          <ScalarProperty Name="pname" ColumnName="pname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="TestTryModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

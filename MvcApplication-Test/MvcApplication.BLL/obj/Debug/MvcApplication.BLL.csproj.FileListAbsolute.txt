@@ -1,0 +1,5 @@
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplication.BLL.dll
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplication.BLL.pdb
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.csprojResolveAssemblyReference.cache
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.dll
+C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.pdb

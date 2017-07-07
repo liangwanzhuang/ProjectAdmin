@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestTryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TestTryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Class" EntityType="TestTryModel.Class" />
+    <EntitySet Name="machineinfo" EntityType="TestTryModel.machineinfo" />
+    <EntitySet Name="ProjectInfo" EntityType="TestTryModel.ProjectInfo" />
+    <EntitySet Name="User" EntityType="TestTryModel.User" />
+  </EntityContainer>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="machineinfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="machineName" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="machineNum" />
+    <Property Type="DateTime" Name="time" Precision="3" />
+    <Property Type="String" Name="other" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProjectInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="pname" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="pjCity" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="machineNum" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="isNow" />
+    <Property Type="String" Name="pjXSName" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="isDealer" />
+    <Property Type="String" Name="phone" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="other" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ClassID" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
