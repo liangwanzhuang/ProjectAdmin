@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TestTryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-  <EntityContainer Name="TestTryEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="TestTryEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Class" EntityType="TestTryModel.Class" />
     <EntitySet Name="machineinfo" EntityType="TestTryModel.machineinfo" />
     <EntitySet Name="ProjectInfo" EntityType="TestTryModel.ProjectInfo" />
@@ -17,34 +17,40 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="machineName" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Type="Int32" Name="machineNum" />
-    <Property Type="DateTime" Name="time" Precision="3" />
-    <Property Type="String" Name="other" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="machineName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="machineNum" Type="Int32" />
+    <Property Name="test" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="createtime" Type="DateTime" Precision="3" />
+    <Property Name="fixtime" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="ProjectInfo">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="String" Name="pname" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Type="String" Name="pjCity" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Type="String" Name="machineNum" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Type="Int32" Name="isNow" />
-    <Property Type="String" Name="pjXSName" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Type="Int32" Name="isDealer" />
-    <Property Type="String" Name="phone" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Type="String" Name="other" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pname" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="pjCity" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="machineNum" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="isNow" Type="Int32" />
+    <Property Name="pjXSName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="isDealer" Type="Int32" />
+    <Property Name="phone" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="createtime" Type="DateTime" Precision="3" />
+    <Property Name="fixtime" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int32" Name="ClassID" />
-    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClassID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="createtime" Type="DateTime" Precision="3" />
+    <Property Name="fixtime" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

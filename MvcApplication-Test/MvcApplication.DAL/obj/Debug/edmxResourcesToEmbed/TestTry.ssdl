@@ -20,8 +20,10 @@
     <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="machineName" Type="nchar" MaxLength="50" />
     <Property Name="machineNum" Type="int" />
-    <Property Name="time" Type="datetime" />
+    <Property Name="test" Type="nchar" MaxLength="50" />
     <Property Name="other" Type="nchar" MaxLength="50" />
+    <Property Name="createtime" Type="datetime" />
+    <Property Name="fixtime" Type="datetime" />
   </EntityType>
   <EntityType Name="ProjectInfo">
     <Key>
@@ -36,6 +38,8 @@
     <Property Name="isDealer" Type="int" />
     <Property Name="phone" Type="nchar" MaxLength="50" />
     <Property Name="other" Type="nchar" MaxLength="50" />
+    <Property Name="createtime" Type="datetime" />
+    <Property Name="fixtime" Type="datetime" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -46,5 +50,7 @@
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" />
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="createtime" Type="datetime" />
+    <Property Name="fixtime" Type="datetime" />
   </EntityType>
 </Schema>

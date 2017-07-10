@@ -13,10 +13,10 @@ namespace MvcApplication.DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TestTryEntities : DbContext
+    public partial class TestTryEntities1 : DbContext
     {
-        public TestTryEntities()
-            : base("name=TestTryEntities")
+        public TestTryEntities1()
+            : base("name=TestTryEntities1")
         {
         }
     

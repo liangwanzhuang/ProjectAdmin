@@ -4,17 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="943d47110c5646e38b7f92aa8cf8245c" Name="关系图1">
-        <EntityTypeShape EntityType="TestTryModel.Class" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TestTryModel.MSreplication_options" Width="1.5" PointX="2.7513788783696382" PointY="5.6365967270157284" />
-        <EntityTypeShape EntityType="TestTryModel.spt_fallback_db" Width="1.5" PointX="5.2768401025220939" PointY="27.066468519655274" />
-        <EntityTypeShape EntityType="TestTryModel.spt_fallback_dev" Width="1.5" PointX="5.0442869034802014" PointY="6.032585370369528" />
-        <EntityTypeShape EntityType="TestTryModel.spt_fallback_usg" Width="1.5" PointX="9.3775331831432567" PointY="1.9452976891516232" />
-        <EntityTypeShape EntityType="TestTryModel.spt_monitor" Width="1.5" PointX="8.1106425095864765" PointY="23.36177320376121" />
-        <EntityTypeShape EntityType="TestTryModel.spt_values" Width="1.5" PointX="8.3850784080033556" PointY="27.095332694749967" />
-        <EntityTypeShape EntityType="TestTryModel.machineinfo" Width="1.5" PointX="7.75" PointY="0.875" />
-        <EntityTypeShape EntityType="TestTryModel.ProjectInfo" Width="1.5" PointX="4.875" PointY="1" />
-        <EntityTypeShape EntityType="TestTryModel.User" Width="1.5" PointX="2.5" PointY="1.5" />
+      <Diagram DiagramId="ff8defbbf3f34b47a628340626208740" Name="关系图1">
+        <EntityTypeShape EntityType="TestTryModel.Class" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestTryModel.machineinfo" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestTryModel.ProjectInfo" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestTryModel.User" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

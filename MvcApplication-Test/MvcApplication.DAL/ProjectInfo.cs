@@ -23,5 +23,7 @@ namespace MvcApplication.DAL
         public Nullable<int> isDealer { get; set; }
         public string phone { get; set; }
         public string other { get; set; }
+        public Nullable<System.DateTime> createtime { get; set; }
+        public Nullable<System.DateTime> fixtime { get; set; }
     }
 }

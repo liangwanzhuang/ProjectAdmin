@@ -19,5 +19,7 @@ namespace MvcApplication.DAL
         public string Name { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+        public Nullable<System.DateTime> createtime { get; set; }
+        public Nullable<System.DateTime> fixtime { get; set; }
     }
 }

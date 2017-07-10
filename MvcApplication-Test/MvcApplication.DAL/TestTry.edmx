@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="TestTryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+      <Schema Namespace="TestTryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="TestTryModelStoreContainer">
           <EntitySet Name="Class" EntityType="TestTryModel.Store.Class" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="machineinfo" EntityType="TestTryModel.Store.machineinfo" store:Type="Tables" Schema="dbo" />
@@ -25,8 +25,10 @@
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="machineName" Type="nchar" MaxLength="50" />
           <Property Name="machineNum" Type="int" />
-          <Property Name="time" Type="datetime" />
+          <Property Name="test" Type="nchar" MaxLength="50" />
           <Property Name="other" Type="nchar" MaxLength="50" />
+          <Property Name="createtime" Type="datetime" />
+          <Property Name="fixtime" Type="datetime" />
         </EntityType>
         <EntityType Name="ProjectInfo">
           <Key>
@@ -41,6 +43,8 @@
           <Property Name="isDealer" Type="int" />
           <Property Name="phone" Type="nchar" MaxLength="50" />
           <Property Name="other" Type="nchar" MaxLength="50" />
+          <Property Name="createtime" Type="datetime" />
+          <Property Name="fixtime" Type="datetime" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -51,12 +55,15 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="createtime" Type="datetime" />
+          <Property Name="fixtime" Type="datetime" />
         </EntityType>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TestTryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="TestTryEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TestTryEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Class" EntityType="TestTryModel.Class" />
           <EntitySet Name="machineinfo" EntityType="TestTryModel.machineinfo" />
           <EntitySet Name="ProjectInfo" EntityType="TestTryModel.ProjectInfo" />
@@ -73,42 +80,48 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="machineName" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Type="Int32" Name="machineNum" />
-          <Property Type="DateTime" Name="time" Precision="3" />
-          <Property Type="String" Name="other" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="machineName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="machineNum" Type="Int32" />
+          <Property Name="test" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="createtime" Type="DateTime" Precision="3" />
+          <Property Name="fixtime" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="ProjectInfo">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Type="Int32" Name="id" Nullable="false" />
-          <Property Type="String" Name="pname" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Type="String" Name="pjCity" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Type="String" Name="machineNum" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Type="Int32" Name="isNow" />
-          <Property Type="String" Name="pjXSName" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Type="Int32" Name="isDealer" />
-          <Property Type="String" Name="phone" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Type="String" Name="other" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pname" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="pjCity" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="machineNum" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="isNow" Type="Int32" />
+          <Property Name="pjXSName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="isDealer" Type="Int32" />
+          <Property Name="phone" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+          <Property Name="createtime" Type="DateTime" Precision="3" />
+          <Property Name="fixtime" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="ClassID" />
-          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="createtime" Type="DateTime" Precision="3" />
+          <Property Name="fixtime" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TestTryModelStoreContainer" CdmEntityContainer="TestTryEntities">
+        <EntityContainerMapping StorageEntityContainer="TestTryModelStoreContainer" CdmEntityContainer="TestTryEntities1">
           <EntitySetMapping Name="Class">
             <EntityTypeMapping TypeName="TestTryModel.Class">
               <MappingFragment StoreEntitySet="Class">
@@ -120,37 +133,43 @@
           <EntitySetMapping Name="machineinfo">
             <EntityTypeMapping TypeName="TestTryModel.machineinfo">
               <MappingFragment StoreEntitySet="machineinfo">
-                <ScalarProperty Name="other" ColumnName="other" />
-                <ScalarProperty Name="time" ColumnName="time" />
-                <ScalarProperty Name="machineNum" ColumnName="machineNum" />
-                <ScalarProperty Name="machineName" ColumnName="machineName" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="machineName" ColumnName="machineName" />
+                <ScalarProperty Name="machineNum" ColumnName="machineNum" />
+                <ScalarProperty Name="test" ColumnName="test" />
+                <ScalarProperty Name="other" ColumnName="other" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="fixtime" ColumnName="fixtime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProjectInfo">
             <EntityTypeMapping TypeName="TestTryModel.ProjectInfo">
               <MappingFragment StoreEntitySet="ProjectInfo">
-                <ScalarProperty Name="other" ColumnName="other" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="isDealer" ColumnName="isDealer" />
-                <ScalarProperty Name="pjXSName" ColumnName="pjXSName" />
-                <ScalarProperty Name="isNow" ColumnName="isNow" />
-                <ScalarProperty Name="machineNum" ColumnName="machineNum" />
-                <ScalarProperty Name="pjCity" ColumnName="pjCity" />
-                <ScalarProperty Name="pname" ColumnName="pname" />
                 <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pname" ColumnName="pname" />
+                <ScalarProperty Name="pjCity" ColumnName="pjCity" />
+                <ScalarProperty Name="machineNum" ColumnName="machineNum" />
+                <ScalarProperty Name="isNow" ColumnName="isNow" />
+                <ScalarProperty Name="pjXSName" ColumnName="pjXSName" />
+                <ScalarProperty Name="isDealer" ColumnName="isDealer" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="other" ColumnName="other" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="fixtime" ColumnName="fixtime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="TestTryModel.User">
               <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+                <ScalarProperty Name="fixtime" ColumnName="fixtime" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
