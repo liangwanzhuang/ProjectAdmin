@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TestTryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="TestTryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="TestTryModelStoreContainer">
           <EntitySet Name="Class" EntityType="TestTryModel.Store.Class" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="machineinfo" EntityType="TestTryModel.Store.machineinfo" store:Type="Tables" Schema="dbo" />
@@ -29,6 +29,7 @@
           <Property Name="other" Type="nchar" MaxLength="50" />
           <Property Name="createtime" Type="datetime" />
           <Property Name="fixtime" Type="datetime" />
+          <Property Name="proID" Type="int" />
         </EntityType>
         <EntityType Name="ProjectInfo">
           <Key>
@@ -58,8 +59,7 @@
           <Property Name="createtime" Type="datetime" />
           <Property Name="fixtime" Type="datetime" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TestTryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -87,6 +87,7 @@
           <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
           <Property Name="createtime" Type="DateTime" Precision="3" />
           <Property Name="fixtime" Type="DateTime" Precision="3" />
+          <Property Type="Int32" Name="proID" />
         </EntityType>
         <EntityType Name="ProjectInfo">
           <Key>
@@ -133,6 +134,7 @@
           <EntitySetMapping Name="machineinfo">
             <EntityTypeMapping TypeName="TestTryModel.machineinfo">
               <MappingFragment StoreEntitySet="machineinfo">
+                <ScalarProperty Name="proID" ColumnName="proID" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="machineName" ColumnName="machineName" />
                 <ScalarProperty Name="machineNum" ColumnName="machineNum" />

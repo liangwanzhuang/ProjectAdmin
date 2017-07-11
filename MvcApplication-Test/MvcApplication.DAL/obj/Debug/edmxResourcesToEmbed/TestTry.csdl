@@ -24,6 +24,7 @@
     <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
     <Property Name="createtime" Type="DateTime" Precision="3" />
     <Property Name="fixtime" Type="DateTime" Precision="3" />
+    <Property Type="Int32" Name="proID" />
   </EntityType>
   <EntityType Name="ProjectInfo">
     <Key>

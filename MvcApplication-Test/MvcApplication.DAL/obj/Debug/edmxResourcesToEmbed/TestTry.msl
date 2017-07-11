@@ -12,6 +12,7 @@
     <EntitySetMapping Name="machineinfo">
       <EntityTypeMapping TypeName="TestTryModel.machineinfo">
         <MappingFragment StoreEntitySet="machineinfo">
+          <ScalarProperty Name="proID" ColumnName="proID" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="machineName" ColumnName="machineName" />
           <ScalarProperty Name="machineNum" ColumnName="machineNum" />

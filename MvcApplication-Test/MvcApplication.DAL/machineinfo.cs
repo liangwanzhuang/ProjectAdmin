@@ -21,5 +21,6 @@ namespace MvcApplication.DAL
         public string other { get; set; }
         public Nullable<System.DateTime> createtime { get; set; }
         public Nullable<System.DateTime> fixtime { get; set; }
+        public Nullable<int> proID { get; set; }
     }
 }
