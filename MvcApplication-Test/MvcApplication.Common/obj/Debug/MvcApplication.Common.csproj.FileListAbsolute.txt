@@ -5,6 +5,5 @@ C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.Common\obj\Debug\M
 C:\Users\xgg\Desktop\Liang\MvcApplication-Test\MvcApplication.Common\obj\Debug\MvcApplication.Common.pdb
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\MvcApplication.Common.dll
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\MvcApplication.Common.pdb
-D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\obj\Debug\MvcApplication.Common.csprojResolveAssemblyReference.cache
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\obj\Debug\MvcApplication.Common.dll
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\obj\Debug\MvcApplication.Common.pdb
