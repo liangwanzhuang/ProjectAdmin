@@ -133,6 +133,9 @@
     <Compile Include="Handler\SignUp.ashx.cs">
       <DependentUpon>SignUp.ashx</DependentUpon>
     </Compile>
+    <Compile Include="service\BaseCommon.cs" />
+    <Compile Include="service\ICommon.cs" />
+    <Compile Include="service\IEntity.cs" />
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\Config.cs" />
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\ConfigHandler.cs" />
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\CrawlerHandler.cs" />
@@ -141,8 +144,8 @@
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\NotSupportedHandler.cs" />
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\PathFormater.cs" />
     <Compile Include="lib\ueditor\1.4.3\net\App_Code\UploadHandler.cs" />
-    <Compile Include="Models\PreAdminIndexModel.cs" />
-    <Compile Include="Models\ProAdminEditModel.cs" />
+    <Compile Include="Models\PreAdminIndex.cs" />
+    <Compile Include="Models\ProAdminEdit.cs" />
     <Compile Include="Models\TestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

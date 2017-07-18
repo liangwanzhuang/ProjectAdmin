@@ -8,3 +8,16 @@ D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplic
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.csprojResolveAssemblyReference.cache
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.dll
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.pdb
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplication.BLL.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplication.BLL.pdb
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\EntityFramework.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\EntityFramework.SqlServer.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplication.DAL.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\MvcApplication.DAL.pdb
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\EntityFramework.xml
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\EntityFramework.SqlServer.xml
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\zh-Hans\EntityFramework.resources.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.csprojResolveAssemblyReference.cache
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.BLL\obj\Debug\MvcApplication.BLL.pdb

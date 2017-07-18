@@ -17,10 +17,10 @@ namespace MvcApplication_Test.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Index(PreAdminIndexModel model)
-        {
-            return View();
-        }
+        //[HttpPost]
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
     }
 }

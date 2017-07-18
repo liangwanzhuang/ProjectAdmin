@@ -7,3 +7,13 @@ D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\MvcApp
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\MvcApplication.Common.pdb
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\obj\Debug\MvcApplication.Common.dll
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\obj\Debug\MvcApplication.Common.pdb
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\MvcApplication.Common.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\MvcApplication.Common.pdb
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\MvcApplication.DAL.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\EntityFramework.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\MvcApplication.DAL.pdb
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\EntityFramework.xml
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\bin\zh-Hans\EntityFramework.resources.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\obj\Debug\MvcApplication.Common.csprojResolveAssemblyReference.cache
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\obj\Debug\MvcApplication.Common.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.Common\obj\Debug\MvcApplication.Common.pdb

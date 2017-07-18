@@ -1,4 +1,5 @@
 ﻿using MvcApplication.DAL;
+using MvcApplication.BLL;
 using MvcApplication_Test.Models;
 using System;
 using System.Collections.Generic;
@@ -14,40 +15,49 @@ namespace MvcApplication_Test.Controllers
     {
         //
         // GET: /PreAdmin/
-
         public ActionResult Index(int page=1)
         {
             //
-            List<PreAdminIndexModel> modelList = new List<PreAdminIndexModel>();
+            List<PreAdminIndex> modelList = new List<PreAdminIndex>();
             modelList = GetProjectInfoList(page);
+            GetProjectInfoList(page);
             ViewData["modelList"] = modelList;
             return View();
         }
 
         public ActionResult Edit(int id)
         {
-            List<PreAdminIndexModel> list = GetProjectInfoList(0, id);
-            ProAdminEditModel model = new ProAdminEditModel();
+            //List<PreAdminIndex> list = GetProjectInfoList(0, id);
+            ProAdminEdit model = new ProAdminEdit();
             
-            if (list.Count > 0)
-            {
+            //if (list.Count > 0)
+            //{
                 
-                model = GetMachine(list[0].id);
-                model.listPro = list[0];
-            }
+            //    model = GetMachine(list[0].id);
+            //    model.listPro = list[0];
+            //}
             
             return View(model);
         }
         public ActionResult Create()
         {
-            PreAdminIndexModel model = new PreAdminIndexModel();
-            return View(model);
+            //PreAdminIndexModel model = new PreAdminIndexModel();
+            return View();
         }
-        public   List<PreAdminIndexModel> GetProjectInfoList( int page,int id=0)
+        //public void GetProjectInfoList(int page, int id = 0)
+        //{
+        //     DBHelper<ProjectInfo> dbhelper = new DBHelper<ProjectInfo>();
+        //     var count = dbhelper.FindList(x => x.id > 0).ToList().Count(); ;
+        //     int i = 0;
+        //     List<ProjectInfo> entityes = dbhelper.FindPagedList(1, 1, out i, x => x.id > 0, s => s.createtime, true).ToList<ProjectInfo>();
+
+        //     //List<UserInfo> list = entityes.ToList<UserInfo>();
+        //}
+        public List<PreAdminIndex> GetProjectInfoList(int page, int id = 0)
         {
             using (var db = new TestTryEntities1())
             {
-                List<PreAdminIndexModel> modelList = new List<PreAdminIndexModel>();
+                List<PreAdminIndex> modelList = new List<PreAdminIndex>();
                 List<ProjectInfo> proList = new List<ProjectInfo>();
                 if (id == 0)
                 {
@@ -55,56 +65,57 @@ namespace MvcApplication_Test.Controllers
                 }
                 else
                 {
-                    proList = db.ProjectInfo.Where(x=>x.id==id).Take(1).ToList(); ;
+                    proList = db.ProjectInfo.Where(x => x.id == id).Take(1).ToList(); ;
                 }
-               
-                ViewData["ProCount"] = db.ProjectInfo.Count().ToString();
+
+                ViewData["ProCount"] = db.ProjectInfo.Count();
 
                 foreach (var item in proList)
                 {
-                    PreAdminIndexModel model = new PreAdminIndexModel();
+                    PreAdminIndex model = new PreAdminIndex();
                     model.id = item.id;
                     model.PjName = item.pname;
                     model.pjCity = item.pjCity;
                     model.PjXSName = item.pjXSName;
                     model.Phone = item.phone;
                     model.MchineNum = item.machineNum;
-                    model.IsDealer = item.isDealer.ToString(); ;
-                    model.IsNow = item.isNow.ToString();
+                    model.IsDealer = item.isDealer; ;
+                    model.IsNow = item.isNow;
                     model.DateTime = item.other;
                     modelList.Add(model);
-                    
+
                 }
                 return modelList;
             }
         }
 
-        public ProAdminEditModel GetMachine(int proId)
-        {
-            using ( var db=new TestTryEntities1())
-            {
-                  var malist = db.machineinfo.Where(x => x.proID == proId).ToList();
-                  ProAdminEditModel model = new ProAdminEditModel();
-                  foreach (var ma in malist)
-                    {
+        //public ProAdminEdit GetMachine(int proId)
+        //{
+        //    using ( var db=new TestTryEntities1())
+        //    {
+        //        List<machineinfo> malist = db.machineinfo.Where(x => x.proID == proId).ToList();
+        //        TestTryEntities1<machineinfo> entry = db.machineinfo<machineinfo>.Where(x => x.proID == proId).ToList();
+        //    //      ProAdminEditModel model = new ProAdminEditModel();
+        //    //      foreach (var ma in malist)
+        //    //        {
 
-                       // model.Machine. = ma.id;
-                       // model.Machine.machineName = ma.machineName;
-                       // model.Machine.test = ma.test;
-                       // model.Machine.other = ma.other;
-                       //model.List.Add(model.Machine)
-                        model.Machine.id = ma.id;
-                        model.Machine.machineName = ma.machineName;
-                        model.Machine.machineNum = ma.machineNum;
-                        model.Machine.test = ma.test;
-                        model.Machine.other = ma.other;
+        //    //           // model.Machine. = ma.id;
+        //    //           // model.Machine.machineName = ma.machineName;
+        //    //           // model.Machine.test = ma.test;
+        //    //           // model.Machine.other = ma.other;
+        //    //           //model.List.Add(model.Machine)
+        //    //            model.Machine.id = ma.id;
+        //    //            model.Machine.machineName = ma.machineName;
+        //    //            model.Machine.machineNum = ma.machineNum;
+        //    //            model.Machine.test = ma.test;
+        //    //            model.Machine.other = ma.other;
 
-                        model.List.Add(model.Machine);
-            }
-                  return model;   
-            }
+        //    //            model.List.Add(model.Machine);
+        //    //}
+        //          return null;   
+        //    }
             
-        }
+        //}
         [HttpPost]
         public int InserProject(string Pname, string PjCity, string MachineNum, string IsNow, string PjXSName, string IsDealer, string Phone, string Other)
         {

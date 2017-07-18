@@ -20,3 +20,14 @@ D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\zh-Hans\E
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.csprojResolveAssemblyReference.cache
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.dll
 D:\ZhuangLiang\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.pdb
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\MvcApplication.DAL.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\MvcApplication.DAL.pdb
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.SqlServer.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.xml
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\EntityFramework.SqlServer.xml
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\zh-Hans\EntityFramework.resources.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.csprojResolveAssemblyReference.cache
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.dll
+F:\s\ProjectAdmin\MvcApplication-Test\MvcApplication.DAL\obj\Debug\MvcApplication.DAL.pdb
