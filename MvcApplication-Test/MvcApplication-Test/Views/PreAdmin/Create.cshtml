@@ -1,0 +1,276 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="Bookmark" href="/favicon.ico">
+    <link rel="Shortcut Icon" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="~/css/waitMe.css" />
+        <link rel="stylesheet" href="~/css/sweetalert.css">
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="~/h-ui/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/h-ui/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="~/h-ui/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="~/h-ui/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/DateTimePicker.css" />
+    <!--[if IE 6]> 
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+    <!--/meta 作为公共模版分离出去-->
+
+    <title>新增文章 - 资讯管理 - H-ui.admin v3.0</title>
+    <meta name="keywords" content="H-ui.admin v3.0,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+    <meta name="description" content="H-ui.admin v3.0，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+    <style>
+        .bor {
+            border: 1px dashed #F00;
+            width: 380px;
+            margin-top: 10px;
+        }
+
+        span {
+            display: block;
+        }
+        /*css注释说明：让span形成块*/
+    </style>
+</head>
+<body>
+    <div class="containerBlock" style="width:100%;height:100%">
+         <article class="page-container">
+
+             <form class="form form-horizontal" id="form-article-add">
+                 <div class="bor" style="float: left;">
+          <div class="row cl" ">
+              <label class="form-label col-xs-4 col-sm-2" style="width: 100px">项目名称：</label>
+              <div class="formControls col-xs-8 col-sm-9">
+                  <input type="text" class="input-text" style="width: 200px" value="" placeholder="" id="txt_pjName" name="articletitle2">
+		</div>
+		</div>
+          <div class="row cl" ">
+			<label class="form-label col-xs-4 col-sm-2" style="width:100px">所在城市：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+			<input type="text" class="input-text" style="width:200px" value="" placeholder="" id="txt_pjCity" name="articletitle2">
+		</div>
+		</div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-2" style="width: 100px">设备数量：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    <input type="text" class="input-text" style="width: 200px" value="0" placeholder="" id="txt_mchineNum" name="articlesort">
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-2" style="width: 100px">项目缓急：</label>
+                <div class="formControls col-xs-8 col-sm-9" style="width: 232px">
+                    <span class="select-box">
+                        <select name="articletype" class="select" id="select_IsNow">
+                            <option value="0">是</option>
+                            <option value="1">否</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+                 <div class="bor" style="float: left; margin-left: 20px;">
+                     <div class="row cl">
+                         <label class="form-label col-xs-4 col-sm-2" style="width: 100px">销售代表：</label>
+                         <div class="formControls col-xs-8 col-sm-9">
+                             <input type="text" class="input-text" style="width: 200px" value="0" placeholder="" id="txt_PjXSName" name="articlesort">
+                         </div>
+                     </div>
+
+                     <div class="row cl">
+                         <label class="form-label col-xs-4 col-sm-2" style="width: 100px">经销商：</label>
+                         <div class="formControls col-xs-8 col-sm-9" style="width: 232px">
+                             <span class="select-box">
+                                 <select name="articletype" class="select" id="txt_IsDealer">
+                                     <option value="0">否</option>
+                                     <option value="1">是</option>
+                                 </select>
+                             </span>
+                         </div>
+                     </div>
+                     <div class="row cl">
+                         <label class="form-label col-xs-4 col-sm-2" style="width: 100px">代表电话：</label>
+                         <div class="formControls col-xs-8 col-sm-9">
+                             <input type="text" class="input-text" style="width: 200px" value="0" placeholder="" id="txt_phone" name="articlesort">
+                         </div>
+                     </div>
+
+                     <div class="row cl">
+                         <label class="form-label col-xs-4 col-sm-2" style="width: 100px">日期：</label>
+                         <div class="formControls col-xs-8 col-sm-9">
+                             <input type="text" style="width: 200px" data-field="datetime" id="commentdatemin" name="commentdatemin" class="input-text Wdate " readonly="true">
+                             <div id="dtBox"></div>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div id="divList" style="border: 1px dashed #00ff21; margin-top: 20px; float: left;">
+                     <div id="div1" style="border: 1px dashed #F00; margin: 10px">
+                         <input type="text" class="input-text" style="width: 180px; margin: 5px" value="" name="test" />
+                         <input type="text" class="input-text" style="width: 180px; margin: 5px" value="" name="test" onchange="if(/\D/.test(this.value)){this.value='';}"/>
+                         <input type="text" class="input-text" style="width: 180px; float: none; margin: 5px" value="" name="test" />
+                         <input type="text" class="input-text" style="width: 180px; margin: 5px" id="field_2" value="" name="test" />
+                         <div style="background-image: url(/images/add.png); width: 40px; height: 40px; float: left;" onclick="add()"></div>
+                         @*            <div style="background-image:url(/images/delect.png);width:40px;height:40px;float:right" ></div>*@
+                     </div>
+                 </div>
+
+                 <div class="row cl">
+                     <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                         <button onclick="article_save_submit();" class="btn btn-default radius" type="submit" style="margin-left:200px"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+                         @*<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>*@
+                        @* <button onClick="removeIframeAll();"  class="btn btn-default radius" type="button" >&nbsp;&nbsp;取消&nbsp;&nbsp;</button>*@
+                     </div>
+                 </div>
+             </form>
+         </article>
+    </div>
+   
+
+    <!--_footer 作为公共模版分离出去-->
+    <script type="text/javascript" src="~/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="~/lib/layer/2.4/layer.js"></script>
+    <script type="text/javascript" src="~/h-ui/h-ui/js/H-ui.min.js"></script>
+    <script type="text/javascript" src="~/h-ui//h-ui.admin/js/H-ui.admin.js"></script>
+
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="~/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="~/js/DateTimePicker.js"></script>
+    <script type="text/javascript" src="~/js/waitMe.js"></script>
+    <script src="~/js/sweetalert-dev.js"></script>
+    <script type="text/javascript">
+
+        var id = 0;
+        var i = 1;
+        var s = ["div1"];
+        function add() {
+            i++;
+            var id = "div" + i.toString();
+            s.push(id);
+            var t = '<div id="div' + i.toString() + '" style="border: 1px dashed #F00;margin:10px" >' +
+            '<input type="text" class="input-text" style="width: 180px;margin:5px" value="" name="test"/>' +
+            '<input type="text" class="input-text" style="width: 180px;margin:5px" value="" name="test"/>' +
+            '<input type="text" class="input-text" style="width: 180px;margin:5px;float:none;" value="" name="test" />' +
+            '<input type="text" class="input-text" style="width: 180px;margin:5px" id="field_2" value="" name="test" />' +
+                '<div style="background-image:url(/images/add.png);width:40px;height:40px;float:left" onclick="add()"></div>' +
+                '<div style="background-image:url(/images/delect.png);width:40px;height:40px;float:right" onclick="remove(div' + i.toString() + ')"></div></div>';
+            $(divList).append(t);
+        }
+        function remove(id) {
+            id.parentNode.removeChild(id);
+        }
+
+        function article_save_submit() {
+            waitMe();
+            var jsonstr = "";
+            var a = [];
+            var Pname = document.getElementById("txt_pjName").value;
+            var PjCity = document.getElementById("txt_pjCity").value;
+            var MachineNum = document.getElementById("txt_mchineNum").value;
+            var IsNow = document.getElementById("select_IsNow").value;
+            var PjXSName = document.getElementById("txt_PjXSName").value;
+            var IsDealer = document.getElementById("txt_IsDealer").value;
+            var Phone = document.getElementById("txt_phone").value;
+            var Other = document.getElementById("commentdatemin").value;
+            debugger
+            var url = '@Url.Action("InserProject", "PreAdmin")';
+
+
+            a.push({ 'Pname': Pname, 'PjCity': PjCity, 'MachineNum': MachineNum, 'IsNow': IsNow, 'PjXSName': PjXSName, 'IsDealer': IsDealer, 'Phone': Phone, 'Other': Other })
+            for (var i = 0; i < s.length; i++) {
+                var x = 1;
+                var PjName = "";
+                var PjNum = "";
+                var Xdd = "";
+                var Xddw = "";
+                var divname = "#" + s[i] + "  input[type='text']";
+
+                $(divname).each(function () {
+                    //遍历div下面所有div
+                    if ($(this).val()!==''&&x == 1) {
+                        PjName = $(this).val();
+                    }
+                    if ($(this).val()!==''&&x == 2) {
+                        PjNum = $(this).val();
+                    }
+                    if ($(this).val()!==''&&x == 3) {
+                        Xdd = $(this).val();
+                    }
+                    if ($(this).val()!==''&&x == 4) {
+                        Xddw = $(this).val();
+                    }
+
+                    x++;
+
+                });
+                if (PjName != "" && PjNum != "" && Xdd != "" && Xddw != "") {
+                    a.push({ 'PjName': PjName, 'PjNum': PjNum, 'Xdd': Xdd, 'Xddw': Xddw });
+                }
+                else
+                {
+                    //swal("Oops ", "必要项没填写", "error");
+                    alert("必要项没填写");
+                    return;
+                }
+            }
+            jsonstr = JSON.stringify(a);//数组json格式化
+            var url = '@Url.Action("InserMachineInfo", "PreAdmin")';
+        $.post(url, { jsonstr: jsonstr, id: id },
+         function (istrue) {
+             if (istrue) {
+                 waitMe_ex_close();
+             }
+             else
+             {
+                 swal("Oops ", "error", "error");
+                 waitMe_ex_close();
+             }
+         });
+        
+    }
+
+    $(document).ready(function () {
+        $("#dtBox").DateTimePicker();
+        //display datetimepicker
+    });
+
+    function waitMe() {
+        $('.containerBlock').waitMe({
+            effect: 'win8_linear',
+            text: 'Please wait...',
+            bg: 'rgba(255,255,255,0.7)',
+            color: '#000',
+            sizeW: '',
+            sizeH: '',
+            
+            //source: 'img.svg'
+        });
+debugger
+        //setTimeout(function () {
+        //    waitMe_ex_close();
+        //}, 1000);
+    }
+    function waitMe_ex_close() {
+        $('.containerBlock').waitMe('hide');
+    }
+    </script>
+    <!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

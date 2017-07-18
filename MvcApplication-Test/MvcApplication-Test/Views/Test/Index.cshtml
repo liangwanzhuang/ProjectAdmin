@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" type="text/css" href="~/css/DateTimePicker.css" />
+@*<link rel="stylesheet" type="text/css" href="~/lib/laypage2/skin/laypage.css" />*@
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500">
+     <link rel="stylesheet" type="text/css" href="~/lib/laypage2/src/css/layui.css" />
+<div class="containerBlock1" style="width:100%;height:100%">
+@using (Html.BeginForm())
+{ 
+    
+
+}
+			
+		</div>
+               <div id="demo7"></div>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="~/lib/jquery/1.9.1/jquery.min.js"></script>
+
+<!--请在下方写此页面业务相关的脚本-->
+@*<script type="text/javascript" src="~/lib/My97DatePicker/4.8/WdatePicker.js"></script>*@
+<script type="text/javascript" src="~/js/DateTimePicker.js"></script>
+<script type="text/javascript" src="~/js/jquery-3.1.1.min.js"></script>
+@*<script type="text/javascript" src="~/lib/laypage2/laypage.js"></script>*@
+ <script type="text/javascript" src="~/lib/laypage2/layui.js"></script>
+<script>
+    function save() {
+        $("form").submit();
+    }
+
+    //调用分页
+    layui.use(['laypage', 'layer'], function () {
+        var laypage = layui.laypage
+        , layer = layui.layer;
+        laypage({
+            cont: 'demo7',
+            pages: 50, //可以叫服务端把总页数放在某一个隐藏域，再获取。假设我们获取到的是18
+            first: false,
+            last: false,
+            curr: function () { //通过url获取当前页，也可以同上（pages）方式获取
+                var page = location.search.match(/page=(\d+)/);
+                //alert(page ? page[1] : 1)
+                layer.msg('第' + (page ? page[1] : 1).toString() + '页');
+                return page ? page[1] : 1;
+            }(),
+            jump: function (e, first) { //触发分页后的回调
+                debugger
+                if (!first) { //一定要加此判断，否则初始时会无限刷新
+                    location.href = '?page=' + e.curr;
+
+                }
+            }
+        });
+
+    });
+</script>
