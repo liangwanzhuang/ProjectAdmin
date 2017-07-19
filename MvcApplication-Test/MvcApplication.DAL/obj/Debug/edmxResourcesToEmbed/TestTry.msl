@@ -12,31 +12,33 @@
     <EntitySetMapping Name="machineinfo">
       <EntityTypeMapping TypeName="TestTryModel.machineinfo">
         <MappingFragment StoreEntitySet="machineinfo">
-          <ScalarProperty Name="proID" ColumnName="proID" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="ProId" ColumnName="ProId" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="MachineModel" ColumnName="MachineModel" />
+          <ScalarProperty Name="MachineNum" ColumnName="MachineNum" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="machineName" ColumnName="machineName" />
-          <ScalarProperty Name="machineNum" ColumnName="machineNum" />
-          <ScalarProperty Name="test" ColumnName="test" />
-          <ScalarProperty Name="other" ColumnName="other" />
-          <ScalarProperty Name="createtime" ColumnName="createtime" />
-          <ScalarProperty Name="fixtime" ColumnName="fixtime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ProjectInfo">
       <EntityTypeMapping TypeName="TestTryModel.ProjectInfo">
         <MappingFragment StoreEntitySet="ProjectInfo">
+          <ScalarProperty Name="IsNow" ColumnName="IsNow" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="SubmitTime" ColumnName="SubmitTime" />
+          <ScalarProperty Name="SalesPhone" ColumnName="SalesPhone" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+          <ScalarProperty Name="MchineNum" ColumnName="MchineNum" />
+          <ScalarProperty Name="PCity" ColumnName="PCity" />
+          <ScalarProperty Name="PName" ColumnName="PName" />
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="pname" ColumnName="pname" />
-          <ScalarProperty Name="pjCity" ColumnName="pjCity" />
-          <ScalarProperty Name="machineNum" ColumnName="machineNum" />
-          <ScalarProperty Name="isNow" ColumnName="isNow" />
-          <ScalarProperty Name="pjXSName" ColumnName="pjXSName" />
-          <ScalarProperty Name="isDealer" ColumnName="isDealer" />
-          <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="other" ColumnName="other" />
-          <ScalarProperty Name="createtime" ColumnName="createtime" />
-          <ScalarProperty Name="fixtime" ColumnName="fixtime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

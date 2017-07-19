@@ -18,29 +18,31 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="machineName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-    <Property Name="machineNum" Type="Int32" />
-    <Property Name="test" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-    <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-    <Property Name="createtime" Type="DateTime" Precision="3" />
-    <Property Name="fixtime" Type="DateTime" Precision="3" />
-    <Property Type="Int32" Name="proID" />
+    <Property Type="String" Name="MachineName" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="MachineNum" />
+    <Property Type="String" Name="MachineModel" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Remark" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" Precision="3" />
+    <Property Type="DateTime" Name="UpdateTime" Precision="3" />
+    <Property Type="Int32" Name="ProId" />
+    <Property Type="Int32" Name="IsDelete" />
   </EntityType>
   <EntityType Name="ProjectInfo">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="pname" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-    <Property Name="pjCity" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
-    <Property Name="machineNum" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-    <Property Name="isNow" Type="Int32" />
-    <Property Name="pjXSName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-    <Property Name="isDealer" Type="Int32" />
-    <Property Name="phone" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-    <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-    <Property Name="createtime" Type="DateTime" Precision="3" />
-    <Property Name="fixtime" Type="DateTime" Precision="3" />
+    <Property Type="String" Name="PName" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="PCity" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="MchineNum" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Salesman" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="StartTime" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="SalesPhone" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="SubmitTime" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="DateTime" Name="CreateTime" Precision="3" />
+    <Property Type="DateTime" Name="UpdateTime" Precision="3" />
+    <Property Type="Int32" Name="IsDelete" />
+    <Property Type="Int32" Name="IsNow" />
   </EntityType>
   <EntityType Name="User">
     <Key>

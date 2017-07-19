@@ -8,14 +8,17 @@ namespace MvcApplication_Test.Models
 	public class PreAdminIndex
 	{
         public int id { get; set; }
-        public string PjName { get; set; }
-        public string pjCity { get; set; }
-        public string PjXSName { get; set; }
+        public string PName { get; set; }
+        public string PCity { get; set; }
         public string MchineNum { get; set; }
-        public string DateTime { get; set; }
-        public string Phone { get; set; }
-         public int? IsDealer { get; set; }
-        public int? IsNow { get; set; }
+        public string Salesman { get; set; }
+        public string StartTime { get; set; }
+        public string SalesPhone { get; set; }
+        public string SubmitTime { get; set; }
+        public Nullable<System.DateTime> CreateTime { get; set; }
+        public Nullable<System.DateTime> UpdateTime { get; set; }
+        public Nullable<int> IsDelete { get; set; }
+        public Nullable<int> IsNow { get; set; }
 
 	}
 }

@@ -23,29 +23,31 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="machineName" Type="nchar" MaxLength="50" />
-          <Property Name="machineNum" Type="int" />
-          <Property Name="test" Type="nchar" MaxLength="50" />
-          <Property Name="other" Type="nchar" MaxLength="50" />
-          <Property Name="createtime" Type="datetime" />
-          <Property Name="fixtime" Type="datetime" />
-          <Property Name="proID" Type="int" />
+          <Property Name="MachineName" Type="nchar" MaxLength="50" />
+          <Property Name="MachineNum" Type="int" />
+          <Property Name="MachineModel" Type="nchar" MaxLength="50" />
+          <Property Name="Remark" Type="nchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="ProId" Type="int" />
+          <Property Name="IsDelete" Type="int" />
         </EntityType>
         <EntityType Name="ProjectInfo">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="pname" Type="nchar" MaxLength="50" />
-          <Property Name="pjCity" Type="nchar" MaxLength="10" />
-          <Property Name="machineNum" Type="nchar" MaxLength="50" />
-          <Property Name="isNow" Type="int" />
-          <Property Name="pjXSName" Type="nchar" MaxLength="50" />
-          <Property Name="isDealer" Type="int" />
-          <Property Name="phone" Type="nchar" MaxLength="50" />
-          <Property Name="other" Type="nchar" MaxLength="50" />
-          <Property Name="createtime" Type="datetime" />
-          <Property Name="fixtime" Type="datetime" />
+          <Property Name="PName" Type="nchar" MaxLength="50" />
+          <Property Name="PCity" Type="nchar" MaxLength="10" />
+          <Property Name="MchineNum" Type="nchar" MaxLength="50" />
+          <Property Name="Salesman" Type="nchar" MaxLength="50" />
+          <Property Name="StartTime" Type="nchar" MaxLength="50" />
+          <Property Name="SalesPhone" Type="nchar" MaxLength="50" />
+          <Property Name="SubmitTime" Type="nchar" MaxLength="50" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="IsDelete" Type="int" />
+          <Property Name="IsNow" Type="int" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -81,29 +83,31 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="machineName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-          <Property Name="machineNum" Type="Int32" />
-          <Property Name="test" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-          <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-          <Property Name="createtime" Type="DateTime" Precision="3" />
-          <Property Name="fixtime" Type="DateTime" Precision="3" />
-          <Property Type="Int32" Name="proID" />
+          <Property Type="String" Name="MachineName" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="MachineNum" />
+          <Property Type="String" Name="MachineModel" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Remark" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" Precision="3" />
+          <Property Type="DateTime" Name="UpdateTime" Precision="3" />
+          <Property Type="Int32" Name="ProId" />
+          <Property Type="Int32" Name="IsDelete" />
         </EntityType>
         <EntityType Name="ProjectInfo">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="pname" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-          <Property Name="pjCity" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
-          <Property Name="machineNum" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-          <Property Name="isNow" Type="Int32" />
-          <Property Name="pjXSName" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-          <Property Name="isDealer" Type="Int32" />
-          <Property Name="phone" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-          <Property Name="other" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
-          <Property Name="createtime" Type="DateTime" Precision="3" />
-          <Property Name="fixtime" Type="DateTime" Precision="3" />
+          <Property Type="String" Name="PName" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="PCity" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="MchineNum" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Salesman" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="StartTime" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="SalesPhone" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="SubmitTime" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Type="DateTime" Name="CreateTime" Precision="3" />
+          <Property Type="DateTime" Name="UpdateTime" Precision="3" />
+          <Property Type="Int32" Name="IsDelete" />
+          <Property Type="Int32" Name="IsNow" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -134,32 +138,34 @@
           <EntitySetMapping Name="machineinfo">
             <EntityTypeMapping TypeName="TestTryModel.machineinfo">
               <MappingFragment StoreEntitySet="machineinfo">
-                <ScalarProperty Name="proID" ColumnName="proID" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ProId" ColumnName="ProId" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="MachineModel" ColumnName="MachineModel" />
+                <ScalarProperty Name="MachineNum" ColumnName="MachineNum" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="machineName" ColumnName="machineName" />
-                <ScalarProperty Name="machineNum" ColumnName="machineNum" />
-                <ScalarProperty Name="test" ColumnName="test" />
-                <ScalarProperty Name="other" ColumnName="other" />
-                <ScalarProperty Name="createtime" ColumnName="createtime" />
-                <ScalarProperty Name="fixtime" ColumnName="fixtime" />
-              </MappingFragment>
+                </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProjectInfo">
             <EntityTypeMapping TypeName="TestTryModel.ProjectInfo">
               <MappingFragment StoreEntitySet="ProjectInfo">
+                <ScalarProperty Name="IsNow" ColumnName="IsNow" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="SubmitTime" ColumnName="SubmitTime" />
+                <ScalarProperty Name="SalesPhone" ColumnName="SalesPhone" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="Salesman" ColumnName="Salesman" />
+                <ScalarProperty Name="MchineNum" ColumnName="MchineNum" />
+                <ScalarProperty Name="PCity" ColumnName="PCity" />
+                <ScalarProperty Name="PName" ColumnName="PName" />
                 <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="pname" ColumnName="pname" />
-                <ScalarProperty Name="pjCity" ColumnName="pjCity" />
-                <ScalarProperty Name="machineNum" ColumnName="machineNum" />
-                <ScalarProperty Name="isNow" ColumnName="isNow" />
-                <ScalarProperty Name="pjXSName" ColumnName="pjXSName" />
-                <ScalarProperty Name="isDealer" ColumnName="isDealer" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="other" ColumnName="other" />
-                <ScalarProperty Name="createtime" ColumnName="createtime" />
-                <ScalarProperty Name="fixtime" ColumnName="fixtime" />
-              </MappingFragment>
+                </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="User">

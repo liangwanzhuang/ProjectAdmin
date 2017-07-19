@@ -27,15 +27,15 @@ namespace MvcApplication_Test.Controllers
 
         public ActionResult Edit(int id)
         {
-            //List<PreAdminIndex> list = GetProjectInfoList(0, id);
+            List<PreAdminIndex> list = GetProjectInfoList(0, id);
             ProAdminEdit model = new ProAdminEdit();
-            
-            //if (list.Count > 0)
-            //{
-                
-            //    model = GetMachine(list[0].id);
-            //    model.listPro = list[0];
-            //}
+
+            if (list.Count > 0)
+            {
+
+                model = GetMachine(list[0].id);
+                model.Pro = list[0];
+            }
             
             return View(model);
         }
@@ -61,7 +61,7 @@ namespace MvcApplication_Test.Controllers
                 List<ProjectInfo> proList = new List<ProjectInfo>();
                 if (id == 0)
                 {
-                    proList = db.ProjectInfo.OrderBy(x => x.createtime).Skip(page - 1 * 1).Take(1).ToList(); ;
+                    proList = db.ProjectInfo.OrderBy(x => x.CreateTime).Skip(page - 1 * 1).Take(1).ToList(); ;
                 }
                 else
                 {
@@ -74,14 +74,14 @@ namespace MvcApplication_Test.Controllers
                 {
                     PreAdminIndex model = new PreAdminIndex();
                     model.id = item.id;
-                    model.PjName = item.pname;
-                    model.pjCity = item.pjCity;
-                    model.PjXSName = item.pjXSName;
-                    model.Phone = item.phone;
-                    model.MchineNum = item.machineNum;
-                    model.IsDealer = item.isDealer; ;
-                    model.IsNow = item.isNow;
-                    model.DateTime = item.other;
+                    model.PName = item.PName;
+                    model.PCity = item.PCity;
+                    model.Salesman = item.Salesman;
+                    model.SalesPhone = item.SalesPhone;
+                    model.MchineNum = item.MchineNum;
+                    model.StartTime = item.StartTime; ;
+                    model.IsNow = item.IsNow;
+                    model.SubmitTime = item.SubmitTime;
                     modelList.Add(model);
 
                 }
@@ -89,33 +89,33 @@ namespace MvcApplication_Test.Controllers
             }
         }
 
-        //public ProAdminEdit GetMachine(int proId)
-        //{
-        //    using ( var db=new TestTryEntities1())
-        //    {
-        //        List<machineinfo> malist = db.machineinfo.Where(x => x.proID == proId).ToList();
-        //        TestTryEntities1<machineinfo> entry = db.machineinfo<machineinfo>.Where(x => x.proID == proId).ToList();
-        //    //      ProAdminEditModel model = new ProAdminEditModel();
-        //    //      foreach (var ma in malist)
-        //    //        {
+        public ProAdminEdit GetMachine(int proId)
+        {
+            using (var db = new TestTryEntities1())
+            {
+                List<machineinfo> malist = db.machineinfo.Where(x => x.ProId == proId).ToList();
+                //TestTryEntities1<machineinfo> entry = db.machineinfo<machineinfo>.Where(x => x.proID == proId).ToList();
+                ProAdminEdit model = new ProAdminEdit();
+                foreach (var ma in malist)
+                {
 
-        //    //           // model.Machine. = ma.id;
-        //    //           // model.Machine.machineName = ma.machineName;
-        //    //           // model.Machine.test = ma.test;
-        //    //           // model.Machine.other = ma.other;
-        //    //           //model.List.Add(model.Machine)
-        //    //            model.Machine.id = ma.id;
-        //    //            model.Machine.machineName = ma.machineName;
-        //    //            model.Machine.machineNum = ma.machineNum;
-        //    //            model.Machine.test = ma.test;
-        //    //            model.Machine.other = ma.other;
+                    // model.Machine. = ma.id;
+                    // model.Machine.machineName = ma.machineName;
+                    // model.Machine.test = ma.test;
+                    // model.Machine.other = ma.other;
+                    //model.List.Add(model.Machine)
+                    model.Machine.id = ma.id;
+                    model.Machine.machineName = ma.MachineName;
+                    model.Machine.machineNum = ma.MachineNum;
+                    model.Machine.test = ma.MachineModel;
+                    model.Machine.other = ma.Remark;
 
-        //    //            model.List.Add(model.Machine);
-        //    //}
-        //          return null;   
-        //    }
-            
-        //}
+                    model.List.Add(model.Machine);
+                }
+                return model;
+            }
+
+        }
         [HttpPost]
         public int InserProject(string Pname, string PjCity, string MachineNum, string IsNow, string PjXSName, string IsDealer, string Phone, string Other)
         {
@@ -128,16 +128,16 @@ namespace MvcApplication_Test.Controllers
                 //}
                 ProjectInfo pro = new ProjectInfo()
                 {
-                    pname = Pname,
-                    pjCity = PjCity,
-                    machineNum = MachineNum,
-                    isNow = Convert.ToInt32(IsNow),
-                    pjXSName = PjXSName,
-                    isDealer = Convert.ToInt32(IsDealer),
-                    phone = Phone,
-                    other = Other,
-                    createtime = DateTime.UtcNow,
-                    fixtime=DateTime.UtcNow
+                    PName = Pname,
+                    PCity = PjCity,
+                    MchineNum = MachineNum,
+                    IsNow = Convert.ToInt32(IsNow),
+                    Salesman = PjXSName,
+                    StartTime = IsDealer,
+                    SalesPhone = Phone,
+                    SubmitTime = Other,
+                    CreateTime = DateTime.UtcNow,
+                    UpdateTime=DateTime.UtcNow
                 };
                 db.ProjectInfo.Add(pro);
                 db.SaveChanges();
@@ -164,16 +164,16 @@ namespace MvcApplication_Test.Controllers
                         {
                             ProjectInfo pro = new ProjectInfo()
                             {
-                                pname = jo["Pname"].ToString(),
-                                pjCity = jo["PjCity"].ToString(),
-                                machineNum = jo["MachineNum"].ToString(),
-                                isNow = Convert.ToInt32(jo["IsNow"].ToString()),
-                                pjXSName = jo["PjXSName"].ToString(),
-                                isDealer = Convert.ToInt32(jo["IsDealer"].ToString()),
-                                phone = jo["Phone"].ToString(),
-                                other = jo["Other"].ToString(),
-                                createtime = DateTime.Now,
-                                fixtime = DateTime.Now
+                                PName = jo["Pname"].ToString(),
+                                PCity = jo["PjCity"].ToString(),
+                                MchineNum = jo["MachineNum"].ToString(),
+                                StartTime = jo["IsNow"].ToString(),
+                                Salesman = jo["PjXSName"].ToString(),
+                                IsNow =Convert.ToInt32(jo["IsDealer"].ToString()),
+                                SalesPhone = jo["Phone"].ToString(),
+                                SubmitTime = jo["Other"].ToString(),
+                                CreateTime = DateTime.Now,
+                                UpdateTime = DateTime.Now
                             };
                             db.ProjectInfo.Add(pro);
                             db.SaveChanges();
@@ -183,13 +183,13 @@ namespace MvcApplication_Test.Controllers
                         {
                             machineinfo model = new machineinfo()
                             {
-                                machineName = jo["PjName"].ToString(),
-                                machineNum = Convert.ToInt32(jo["PjNum"].ToString()),
-                                test = jo["Xdd"].ToString(),
-                                other = jo["Xddw"].ToString(),
-                                createtime = DateTime.Now,
-                                fixtime = DateTime.Now,
-                                proID=proId
+                                MachineName = jo["PjName"].ToString(),
+                                MachineNum = Convert.ToInt32(jo["PjNum"].ToString()),
+                                MachineModel = jo["Xdd"].ToString(),
+                                Remark = jo["Xddw"].ToString(),
+                                CreateTime = DateTime.Now,
+                                UpdateTime = DateTime.Now,
+                                ProId= proId
 
                             };
                             db.machineinfo.Add(model);

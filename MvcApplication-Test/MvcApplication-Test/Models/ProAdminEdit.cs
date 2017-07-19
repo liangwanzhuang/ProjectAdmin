@@ -8,7 +8,14 @@ namespace MvcApplication_Test.Models
 {
 	public class ProAdminEdit
 	{
-        public ProjectInfo Pro { get; set; }
-        public machineinfo List { get; set; }
+        public ProAdminEdit()
+        {
+            Pro = new PreAdminIndex();
+            List = new List<machineinfo>();
+            Machine = new machineinfo();
+        }
+        public PreAdminIndex Pro { get; set; }
+        public List<machineinfo> List { get; set; }
+        public machineinfo Machine { get; set; }
 	}
 }
