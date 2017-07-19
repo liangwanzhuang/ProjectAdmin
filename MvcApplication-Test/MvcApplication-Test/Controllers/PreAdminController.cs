@@ -36,7 +36,21 @@ namespace MvcApplication_Test.Controllers
                 model = GetMachine(list[0].id);
                 model.Pro = list[0];
             }
-            
+
+            return View(model);
+            return View();
+        }
+        public ActionResult Show(int id)
+        {
+            List<PreAdminIndex> list = GetProjectInfoList(0, id);
+            ProAdminEdit model = new ProAdminEdit();
+
+            if (list.Count > 0)
+            {
+
+                model = GetMachine(list[0].id);
+                model.Pro = list[0];
+            }
             return View(model);
         }
         public ActionResult Create()
@@ -105,10 +119,10 @@ namespace MvcApplication_Test.Controllers
                     // model.Machine.other = ma.other;
                     //model.List.Add(model.Machine)
                     model.Machine.id = ma.id;
-                    model.Machine.machineName = ma.MachineName;
-                    model.Machine.machineNum = ma.MachineNum;
-                    model.Machine.test = ma.MachineModel;
-                    model.Machine.other = ma.Remark;
+                    model.Machine.MachineName =ma.MachineName;
+                    model.Machine.MachineNum = ma.MachineNum;
+                    model.Machine.MachineModel = ma.MachineModel;
+                    model.Machine.Remark = ma.Remark;
 
                     model.List.Add(model.Machine);
                 }

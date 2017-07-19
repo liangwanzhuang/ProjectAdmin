@@ -1521,6 +1521,9 @@
     <Content Include="lib\laypage\lay\font\iconfont.ttf" />
     <Content Include="lib\laypage\lay\font\iconfont.woff" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PreAdmin\Show.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
